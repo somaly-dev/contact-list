@@ -11,8 +11,9 @@ var homeRouter = require('./routes/default');
 const app = express();
 
 
-// Récupérer les routes Users
+// Récupérer les routes
 const userRoutes = require('./routes/User')
+const contactRoute = require("./routes/contacts")
 
 const dotenv = require('dotenv');
 dotenv.config({path: '.env'});
@@ -38,5 +39,6 @@ mongoose.connect(mongoDB, {
 app.use('/', homeRouter);
 
 app.use(userRoutes);
+app.use(contactRoute);
 
 module.exports = app;
