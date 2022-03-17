@@ -1,1 +1,15 @@
 <%- include('../views/layouts/layout') -%>
+<main>
+    <div class="container">
+        <div class="wrapper" style="text-align: -webkit-center;">
+            <form action="/register" method="POST" name="Login_Form" class="form-signin" style="width: 30%;">
+                <h3 class="form-signin-heading marge">Inscription</h3>
+    
+                <input type="text" class="form-control marge" name="email" placeholder="Adresse email" required="" autofocus="" />
+                <input type="password" class="form-control marge" name="password" placeholder="Mot de passe" required=""/>
+    
+                <button class="btn btn-lg btn-primary btn-block marge" name="Submit" value="Register" type="Submit">Inscription</button>
+            </form>
+        </div>
+    </div>
+</main>
