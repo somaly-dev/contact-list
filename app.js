@@ -6,16 +6,17 @@ var path = require('path');
 const passportLocal = require('passport-local');
 const passportLocalMongoose = require('passport-local-mongoose');
 
-var homeRouter = require('./routes/default');
+const homeRouter = require('./routes/auth');
 
 const app = express();
 
 
 // Récupérer les routes
 const userRoutes = require('./routes/User')
-const contactRoute = require("./routes/contacts")
+const contactRoute = require('./routes/contacts')
 
 const dotenv = require('dotenv');
+const { home } = require('nodemon/lib/utils');
 dotenv.config({path: '.env'});
 
 // view engine setup
@@ -40,5 +41,6 @@ app.use('/', homeRouter);
 
 app.use(userRoutes);
 app.use(contactRoute);
+app.use(homeRouter);
 
 module.exports = app;
