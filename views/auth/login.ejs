@@ -1,5 +1,6 @@
-<div class="p-3 mx-auto text-center">
-    <h1 class="display-4">Connexion</h1>
+<%- include('../layouts/layout.ejs') -%>
+<div class="mx-auto text-center">
+    <h1 class="display-4">Connectez-vous</h1>
 </div>
 
 <div class="py-5 bg-light">
@@ -12,7 +13,7 @@
                         <!-- Email -->
                         <div class="form-group">
                             <label for="email">Email</label>
-                            <input class="form-control" id="email" name="email" placeholder="Email." type="email">
+                            <input class="form-control" id="email" name="email" placeholder="Adresse email" type="email">
                                 <small class="form-text text-muted">
                                     Saisissez votre email.
                                 </small>
@@ -25,10 +26,13 @@
                             <small class="form-text text-muted">
                                 Saisissez votre mot de passe.
                             </small>
+                            <small class="form-text text-muted">
+                                Pas de compte ? <a href="/register">Inscrivez-vous</a> 
+                            </small>
                         </div>
 
-                        <!-- Submit -->
-                        <button class="btn btn-block btn-dark">
+                        <!-- Submit button -->
+                        <button class="btn btn-block btn-primary">
                             <i class="fas fa-lock"></i>
                             Connexion
                         </button>

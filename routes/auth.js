@@ -10,15 +10,18 @@ router.get('/', function(req, res, next) {
   });
 
 
-// Get Register Page
+// Get Register Page 
 router.get('/register', function(req, res, next) {
   res.render('register');
 });
 
+// POST new user
 router.post('/register', function(req, res, next) {
   const user = new User({
     ...req.body
-});
+},
+  res.redirect('/')
+);
 user.save()
     .then(() => res.status(201).json({ message: 'User Created !' }))
     .catch(error => res.status(400).json({ error }));

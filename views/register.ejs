@@ -1,15 +1,38 @@
 <%- include('../views/layouts/layout') -%>
-<main>
+<div class="mx-auto text-center">
+    <h1 class="display-4">Inscrivez-vous</h1>
+</div>
+
+<div class="py-5 bg-light">
     <div class="container">
-        <div class="wrapper" style="text-align: -webkit-center;">
-            <form action="/register" method="POST" name="Login_Form" class="form-signin" style="width: 30%;">
-                <h3 class="form-signin-heading marge">Inscription</h3>
+        <div class="row">
+            <div class="col">
+                <div class="card shadow-sm p-4">
+                    <form action="/register" method="POST" name="Login_Form">
+                        
+                        <!-- Email -->
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input class="form-control" id="email" name="email" placeholder="Adresse email" type="email" required="" autofocus="">
+                                <small class="form-text text-muted">
+                                    Saisissez une adresse email.
+                                </small>
+                        </div>
+
+                        <!-- Password -->
+                        <div class="form-group">
+                            <label for="password">Mot de passe</label>
+                            <input class="form-control" id="password" name="password" placeholder="Mot de passe." type="password" required="">
+                            <small class="form-text text-muted">
+                                Saisissez un mot de passe.
+                            </small>
+                        </div>
     
-                <input type="text" class="form-control marge" name="email" placeholder="Adresse email" required="" autofocus="" />
-                <input type="password" class="form-control marge" name="password" placeholder="Mot de passe" required=""/>
-    
-                <button class="btn btn-lg btn-primary btn-block marge" name="Submit" value="Register" type="Submit">Inscription</button>
-            </form>
+                        <button class="btn btn-block btn-primary" name="Submit" value="Register" type="Submit">Inscription</button>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
-</main>
+</div>    
+
